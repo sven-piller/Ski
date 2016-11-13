@@ -20,12 +20,18 @@ class RootViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
 
+    private let dataManager = DataManager(baseURL: OpenWeatherMapAPI.AuthenticatedBaseURL)
+
     @IBOutlet var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+
+        dataManager.weatherDataForCity(cityName: Defaults.City) { (response, error) in
+            print(response!)
+        }
 
     }
 

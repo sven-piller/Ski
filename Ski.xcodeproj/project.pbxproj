@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1135980C1DD8F70C0019774D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135980B1DD8F70C0019774D /* DataManager.swift */; };
 		114CC84E1DD8835A00249580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC84D1DD8835A00249580 /* AppDelegate.swift */; };
 		114CC8551DD8835A00249580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114CC8541DD8835A00249580 /* Assets.xcassets */; };
 		114CC8631DD8835A00249580 /* SkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC8621DD8835A00249580 /* SkiTests.swift */; };
@@ -19,6 +20,7 @@
 		11D6E3251DD8A51C00039AFD /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D6E3241DD8A51C00039AFD /* DayCollectionViewCell.swift */; };
 		11D6E3271DD8A52800039AFD /* NowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D6E3261DD8A52800039AFD /* NowCollectionViewCell.swift */; };
 		11D6E3291DD8A53300039AFD /* WeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D6E3281DD8A53300039AFD /* WeekCollectionViewCell.swift */; };
+		11D6E32C1DD8F42C00039AFD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D6E32B1DD8F42C00039AFD /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1135980B1DD8F70C0019774D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		114CC84A1DD8835A00249580 /* Ski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ski.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114CC84D1DD8835A00249580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		114CC8541DD8835A00249580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		11D6E3241DD8A51C00039AFD /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		11D6E3261DD8A52800039AFD /* NowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowCollectionViewCell.swift; sourceTree = "<group>"; };
 		11D6E3281DD8A53300039AFD /* WeekCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekCollectionViewCell.swift; sourceTree = "<group>"; };
+		11D6E32B1DD8F42C00039AFD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1135980A1DD8F6DC0019774D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1135980B1DD8F70C0019774D /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		114CC8411DD8835A00249580 = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +101,12 @@
 		114CC84C1DD8835A00249580 /* Ski */ = {
 			isa = PBXGroup;
 			children = (
+				11D6E32A1DD8F40F00039AFD /* Configuration */,
 				114CC86D1DD883D600249580 /* Application Delegate */,
 				114CC8721DD884D600249580 /* ViewControllers */,
 				114CC8731DD8857500249580 /* Storyboards */,
 				114CC86E1DD883E700249580 /* Resources */,
+				1135980A1DD8F6DC0019774D /* Managers */,
 				114CC86F1DD8843D00249580 /* Supporting Files */,
 			);
 			path = Ski;
@@ -192,6 +206,14 @@
 				11D6E3281DD8A53300039AFD /* WeekCollectionViewCell.swift */,
 			);
 			path = "Collection View Cells";
+			sourceTree = "<group>";
+		};
+		11D6E32A1DD8F40F00039AFD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				11D6E32B1DD8F42C00039AFD /* Configuration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +323,9 @@
 				11D6E31E1DD8A3F100039AFD /* NowViewController.swift in Sources */,
 				11D6E3251DD8A51C00039AFD /* DayCollectionViewCell.swift in Sources */,
 				11D6E3291DD8A53300039AFD /* WeekCollectionViewCell.swift in Sources */,
+				11D6E32C1DD8F42C00039AFD /* Configuration.swift in Sources */,
 				11D6E3221DD8A47B00039AFD /* DayViewController.swift in Sources */,
+				1135980C1DD8F70C0019774D /* DataManager.swift in Sources */,
 				11D6E3191DD8964400039AFD /* RootViewController.swift in Sources */,
 				11D6E3201DD8A46900039AFD /* WeekViewController.swift in Sources */,
 				11D6E3271DD8A52800039AFD /* NowCollectionViewCell.swift in Sources */,
