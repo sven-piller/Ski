@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		114CC84E1DD8835A00249580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC84D1DD8835A00249580 /* AppDelegate.swift */; };
-		114CC8501DD8835A00249580 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC84F1DD8835A00249580 /* ViewController.swift */; };
 		114CC8551DD8835A00249580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114CC8541DD8835A00249580 /* Assets.xcassets */; };
 		114CC8631DD8835A00249580 /* SkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC8621DD8835A00249580 /* SkiTests.swift */; };
-		114CC8711DD8848700249580 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 114CC8701DD8848700249580 /* Info.plist */; };
 		114CC8751DD8859900249580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114CC8741DD8859900249580 /* Main.storyboard */; };
 		114CC8771DD885BB00249580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114CC8761DD885BB00249580 /* LaunchScreen.storyboard */; };
+		11D6E3191DD8964400039AFD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D6E3181DD8964400039AFD /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		114CC84A1DD8835A00249580 /* Ski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ski.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114CC84D1DD8835A00249580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		114CC84F1DD8835A00249580 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		114CC8541DD8835A00249580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114CC85E1DD8835A00249580 /* SkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		114CC8621DD8835A00249580 /* SkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiTests.swift; sourceTree = "<group>"; };
@@ -37,6 +35,7 @@
 		114CC8701DD8848700249580 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114CC8741DD8859900249580 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		114CC8761DD885BB00249580 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11D6E3181DD8964400039AFD /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +122,7 @@
 		114CC8721DD884D600249580 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				114CC84F1DD8835A00249580 /* ViewController.swift */,
+				11D6E3151DD8941D00039AFD /* RootViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +134,15 @@
 				114CC8761DD885BB00249580 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		11D6E3151DD8941D00039AFD /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11D6E3181DD8964400039AFD /* RootViewController.swift */,
+			);
+			name = RootViewController;
+			path = "Root View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +231,6 @@
 			files = (
 				114CC8751DD8859900249580 /* Main.storyboard in Resources */,
 				114CC8771DD885BB00249580 /* LaunchScreen.storyboard in Resources */,
-				114CC8711DD8848700249580 /* Info.plist in Resources */,
 				114CC8551DD8835A00249580 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114CC8501DD8835A00249580 /* ViewController.swift in Sources */,
+				11D6E3191DD8964400039AFD /* RootViewController.swift in Sources */,
 				114CC84E1DD8835A00249580 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +439,7 @@
 				114CC8691DD8835A00249580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		114CC86A1DD8835A00249580 /* Build configuration list for PBXNativeTarget "SkiTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +448,7 @@
 				114CC86C1DD8835A00249580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
