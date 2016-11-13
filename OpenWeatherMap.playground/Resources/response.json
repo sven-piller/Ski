@@ -1,0 +1,40 @@
+{
+    "coord": {
+        "lon": 12.25,
+        "lat": 47.53
+    },
+    "weather": [{
+        "id": 803,
+        "main": "Clouds",
+        "description": "überwiegend bewölkt",
+        "icon": "04n"
+    }],
+    "base": "stations",
+    "main": {
+        "temp": 272.15,
+        "pressure": 1027,
+        "humidity": 92,
+        "temp_min": 272.15,
+        "temp_max": 272.15
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.6,
+        "deg": 30
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1479066600,
+    "sys": {
+        "type": 1,
+        "id": 5933,
+        "message": 0.2701,
+        "country": "AT",
+        "sunrise": 1479017676,
+        "sunset": 1479051345
+    },
+    "id": 2766084,
+    "name": "Scheffau am Wilden Kaiser",
+    "cod": 200
+}
