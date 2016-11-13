@@ -9,9 +9,18 @@ let url = Bundle.main.url(forResource: "response", withExtension: "json")!
 let data = try! Data(contentsOf: url)
 
 // Deserialize JSON
-let JSON = try! JSONSerialization.jsonObject(with: data, options: [])
+//let JSON = try! JSONSerialization.jsonObject(with: data, options: [])
+//
+//if let weatherData = WeatherData(JSON: JSON) {
+//    print(weatherData)  
+//}
 
-if let weatherData = WeatherData(JSON: JSON) {
-    print(weatherData)  
+do {
+    let decoder = try JSONDecoder(data: data)
+    let weatherData = try WeatherData(decoder: decoder)
+
+    print(weatherData)
+
+} catch {
+    print(error)
 }
-
