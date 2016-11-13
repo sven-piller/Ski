@@ -13,10 +13,10 @@ class RootViewController: UIViewController, UICollectionViewDataSource, UICollec
     enum RootViewType: Int {
         case Now = 0
         case Day
-        case week
+        case Week
 
         static var count: Int {
-            return RootViewType.week.rawValue + 1
+            return RootViewType.Week.rawValue + 1
         }
     }
 
@@ -29,6 +29,10 @@ class RootViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+
 
     // Notwendig zu implementierende Methoden aus UICollectionViewDataSource
 
@@ -38,15 +42,57 @@ class RootViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        // Dequeue Reusable Cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "someCell", for: indexPath)
+        guard let type = RootViewType(rawValue: indexPath.item) else {
+            return UICollectionViewCell()
+        }
 
-        // Configure Cell
-        cell.contentView.backgroundColor = .green
+        switch type {
+        case .Day:
+            // Dequeue Reusable Cell
+            return collectionView.dequeueReusableCell(withReuseIdentifier: DayCollectionViewCell.ReuseIdentifier, for: indexPath as IndexPath)
 
-        return cell
+        case .Now:
+            // Dequeue Reusable Cell
+            return collectionView.dequeueReusableCell(withReuseIdentifier: NowCollectionViewCell.ReuseIdentifier, for: indexPath as IndexPath)
 
+        case .Week:
+            // Dequeue Reusable Cell
+            return collectionView.dequeueReusableCell(withReuseIdentifier: WeekCollectionViewCell.ReuseIdentifier, for: indexPath as IndexPath)
+
+        }
     }
+
+    // Collection View Delegate Flow Layout Methods
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bounds = collectionView.bounds
+        return CGSize(width: (bounds.width * aspectRatio), height: bounds.height )
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return minimumInteritemSpacingForSection
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return minimumLineSpacingForSection
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return insetForSection
+    }
+
+    var aspectRatio: CGFloat {
+        switch traitCollection.horizontalSizeClass {
+        case .compact:
+            return 1.0
+        default:
+            return 1.0 / 3.0
+        }
+    }
+
+    let minimumInteritemSpacingForSection: CGFloat = 0.0
+    let minimumLineSpacingForSection: CGFloat = 0.0
+    let insetForSection = UIEdgeInsets()
 
     // Funktionen für die Views
 
@@ -55,13 +101,15 @@ class RootViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
     func setupCollectionView() {
-        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "someCell")
+        collectionView.register(NowCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: NowCollectionViewCell.ReuseIdentifier)
+        collectionView.register(DayCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: DayCollectionViewCell.ReuseIdentifier)
+        collectionView.register(WeekCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: WeekCollectionViewCell.ReuseIdentifier)
     }
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     
 }
